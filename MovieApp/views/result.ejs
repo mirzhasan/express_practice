@@ -1,0 +1,12 @@
+<h1>The search results are as follows:</h1>
+
+<% if(data.Response==="True"){ %>
+<ul>
+   <% data.Search.forEach(function(movie){ %>
+       <li> <%= movie.Title %></li>
+   <% }) %>
+</ul>
+<% } else {%>
+<p>No movies found</p>
+<% }%>
+
