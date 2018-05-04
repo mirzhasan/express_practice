@@ -9,5 +9,5 @@ This repository contains all practice work pertaining to Express, Node, MongoDB 
 
 1. Start MongoDB
 2. npm install
-3. mongo app.js
+3. node app.js
 
