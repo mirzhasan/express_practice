@@ -1,0 +1,50 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div>
+                <ul class="list-group">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+           <div class="card">
+              <img class="card-img-top" src=" <%=campground.image %>">
+              <div class="card-body">
+                   <h5 class="card-title"><a><%=campground.name %></a></h5>
+                   <p class="text-right">$9.00/night</p>
+                   <p><em><%=campground.author.username%></em></p>
+                    <p class="card-text"> <%=campground.description %></p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+<div class="row justify-content-end">
+    <div class="col-md-9">
+                              <div class="card bg-light">
+                                  <div class="card-body">
+                                      <p class="text-right"><a class="btn btn-success" href="/campgrounds/<%=campground._id%>/comments/new">Add new comment</a></p>
+                                        <% campground.comments.forEach(function(comment){ %>
+                <p>
+                <strong><%=comment.author%></strong> - <%=comment.text%> 
+                </p>    
+            <% }); %>
+                                  </div>
+               
+            </div>
+    </div>
+     </div>
+ 
+</div>
+
+<!--<h1> </h1>-->
+
+<!--<p></p>-->
+
+
+<% include ../partials/footer %>
