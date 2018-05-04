@@ -1,0 +1,8 @@
+<h1><%= blog.title %></h1>
+<img src=" <%=blog.image %>" >
+<p><%=blog.body%></p>
+
+<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+    <input type="submit">
+</form>
+
